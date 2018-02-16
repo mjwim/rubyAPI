@@ -41,3 +41,286 @@ Migrating to CreateHops (20180215174358)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4353133880935763280)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (9.8ms)[0m  [1m[31mDELETE FROM "breweries"[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[31mDELETE FROM "beers"[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "hops"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.0ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "St Austell"], ["location", "St Austell"], ["country", "UK"], ["created_at", "2018-02-16 08:11:31.579263"], ["updated_at", "2018-02-16 08:11:31.579263"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brewdog"], ["location", "Ellon"], ["country", "UK"], ["created_at", "2018-02-16 08:11:31.606417"], ["updated_at", "2018-02-16 08:11:31.606417"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Camden Town"], ["location", "London"], ["country", "UK"], ["created_at", "2018-02-16 08:11:31.612152"], ["updated_at", "2018-02-16 08:11:31.612152"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fuggles"], ["created_at", "2018-02-16 08:11:31.621836"], ["updated_at", "2018-02-16 08:11:31.621836"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Celeia"], ["created_at", "2018-02-16 08:11:31.624063"], ["updated_at", "2018-02-16 08:11:31.624063"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Willamette"], ["created_at", "2018-02-16 08:11:31.626070"], ["updated_at", "2018-02-16 08:11:31.626070"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Simcoe"], ["created_at", "2018-02-16 08:11:31.627905"], ["updated_at", "2018-02-16 08:11:31.627905"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Citra"], ["created_at", "2018-02-16 08:11:31.629615"], ["updated_at", "2018-02-16 08:11:31.629615"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Perle"], ["created_at", "2018-02-16 08:11:31.631512"], ["updated_at", "2018-02-16 08:11:31.631512"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hallertau Tradition"], ["created_at", "2018-02-16 08:11:31.633562"], ["updated_at", "2018-02-16 08:11:31.633562"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chinook"], ["created_at", "2018-02-16 08:11:31.635473"], ["updated_at", "2018-02-16 08:11:31.635473"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ahtanum"], ["created_at", "2018-02-16 08:11:31.637366"], ["updated_at", "2018-02-16 08:11:31.637366"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nelson Sauvin"], ["created_at", "2018-02-16 08:11:31.639124"], ["updated_at", "2018-02-16 08:11:31.639124"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cascade"], ["created_at", "2018-02-16 08:11:31.640661"], ["updated_at", "2018-02-16 08:11:31.640661"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Amarillo"], ["created_at", "2018-02-16 08:11:31.642093"], ["updated_at", "2018-02-16 08:11:31.642093"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mosaic"], ["created_at", "2018-02-16 08:11:31.643645"], ["updated_at", "2018-02-16 08:11:31.643645"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (10.9ms)[0m  [1m[31mDELETE FROM "breweries"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "beers"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "hops"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "St Austell"], ["location", "St Austell"], ["country", "UK"], ["created_at", "2018-02-16 08:11:56.050682"], ["updated_at", "2018-02-16 08:11:56.050682"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brewdog"], ["location", "Ellon"], ["country", "UK"], ["created_at", "2018-02-16 08:11:56.053913"], ["updated_at", "2018-02-16 08:11:56.053913"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Camden Town"], ["location", "London"], ["country", "UK"], ["created_at", "2018-02-16 08:11:56.055852"], ["updated_at", "2018-02-16 08:11:56.055852"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fuggles"], ["created_at", "2018-02-16 08:11:56.065941"], ["updated_at", "2018-02-16 08:11:56.065941"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Celeia"], ["created_at", "2018-02-16 08:11:56.068768"], ["updated_at", "2018-02-16 08:11:56.068768"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Willamette"], ["created_at", "2018-02-16 08:11:56.070712"], ["updated_at", "2018-02-16 08:11:56.070712"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Simcoe"], ["created_at", "2018-02-16 08:11:56.072564"], ["updated_at", "2018-02-16 08:11:56.072564"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Citra"], ["created_at", "2018-02-16 08:11:56.074542"], ["updated_at", "2018-02-16 08:11:56.074542"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Perle"], ["created_at", "2018-02-16 08:11:56.076504"], ["updated_at", "2018-02-16 08:11:56.076504"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hallertau Tradition"], ["created_at", "2018-02-16 08:11:56.078480"], ["updated_at", "2018-02-16 08:11:56.078480"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chinook"], ["created_at", "2018-02-16 08:11:56.080357"], ["updated_at", "2018-02-16 08:11:56.080357"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ahtanum"], ["created_at", "2018-02-16 08:11:56.082428"], ["updated_at", "2018-02-16 08:11:56.082428"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nelson Sauvin"], ["created_at", "2018-02-16 08:11:56.084221"], ["updated_at", "2018-02-16 08:11:56.084221"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cascade"], ["created_at", "2018-02-16 08:11:56.085704"], ["updated_at", "2018-02-16 08:11:56.085704"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Amarillo"], ["created_at", "2018-02-16 08:11:56.087314"], ["updated_at", "2018-02-16 08:11:56.087314"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mosaic"], ["created_at", "2018-02-16 08:11:56.089134"], ["updated_at", "2018-02-16 08:11:56.089134"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (1.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (14, 15, 16)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4353133880935763280)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJoinTableBeersHops (20180216081258)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "beers_hops" ("beer_id" bigint NOT NULL, "hop_id" bigint NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180216081258"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4353133880935763280)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[31mDELETE FROM "breweries"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "beers"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "hops"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "St Austell"], ["location", "St Austell"], ["country", "UK"], ["created_at", "2018-02-16 08:13:55.354056"], ["updated_at", "2018-02-16 08:13:55.354056"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brewdog"], ["location", "Ellon"], ["country", "UK"], ["created_at", "2018-02-16 08:13:55.356484"], ["updated_at", "2018-02-16 08:13:55.356484"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "breweries" ("name", "location", "country", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Camden Town"], ["location", "London"], ["country", "UK"], ["created_at", "2018-02-16 08:13:55.358434"], ["updated_at", "2018-02-16 08:13:55.358434"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fuggles"], ["created_at", "2018-02-16 08:13:55.367780"], ["updated_at", "2018-02-16 08:13:55.367780"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Celeia"], ["created_at", "2018-02-16 08:13:55.369724"], ["updated_at", "2018-02-16 08:13:55.369724"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Willamette"], ["created_at", "2018-02-16 08:13:55.371705"], ["updated_at", "2018-02-16 08:13:55.371705"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Simcoe"], ["created_at", "2018-02-16 08:13:55.373720"], ["updated_at", "2018-02-16 08:13:55.373720"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Citra"], ["created_at", "2018-02-16 08:13:55.375747"], ["updated_at", "2018-02-16 08:13:55.375747"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Perle"], ["created_at", "2018-02-16 08:13:55.377245"], ["updated_at", "2018-02-16 08:13:55.377245"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hallertau Tradition"], ["created_at", "2018-02-16 08:13:55.378845"], ["updated_at", "2018-02-16 08:13:55.378845"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Chinook"], ["created_at", "2018-02-16 08:13:55.380875"], ["updated_at", "2018-02-16 08:13:55.380875"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ahtanum"], ["created_at", "2018-02-16 08:13:55.382663"], ["updated_at", "2018-02-16 08:13:55.382663"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nelson Sauvin"], ["created_at", "2018-02-16 08:13:55.384497"], ["updated_at", "2018-02-16 08:13:55.384497"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cascade"], ["created_at", "2018-02-16 08:13:55.386388"], ["updated_at", "2018-02-16 08:13:55.386388"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Amarillo"], ["created_at", "2018-02-16 08:13:55.388343"], ["updated_at", "2018-02-16 08:13:55.388343"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "hops" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mosaic"], ["created_at", "2018-02-16 08:13:55.389778"], ["updated_at", "2018-02-16 08:13:55.389778"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (0.6ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (27, 28, 29)[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "beers" ("name", "artwork", "ABV", "brewery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Tribute"], ["artwork", "http://www.fillmurray.com/300/300"], ["ABV", 6.991], ["brewery_id", 7], ["created_at", "2018-02-16 08:13:55.426326"], ["updated_at", "2018-02-16 08:13:55.426326"]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 1], ["hop_id", 27]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 1], ["hop_id", 28]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 1], ["hop_id", 29]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (0.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (29, 34, 37)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "beers" ("name", "artwork", "ABV", "brewery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Proper Job"], ["artwork", "http://www.fillmurray.com/300/300"], ["ABV", 6.99], ["brewery_id", 7], ["created_at", "2018-02-16 08:13:55.438897"], ["updated_at", "2018-02-16 08:13:55.438897"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 2], ["hop_id", 29]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 2], ["hop_id", 34]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 2], ["hop_id", 37]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (0.4ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (30, 34, 35, 36, 37, 39)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "artwork", "ABV", "brewery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Punk IPA"], ["artwork", "http://www.fillmurray.com/300/300"], ["ABV", 6.99], ["brewery_id", 8], ["created_at", "2018-02-16 08:13:55.449397"], ["updated_at", "2018-02-16 08:13:55.449397"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 3], ["hop_id", 30]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 3], ["hop_id", 34]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 3], ["hop_id", 35]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 3], ["hop_id", 36]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 3], ["hop_id", 37]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 3], ["hop_id", 39]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (0.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (30, 31, 39)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "artwork", "ABV", "brewery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dead Pony Club"], ["artwork", "http://www.fillmurray.com/300/300"], ["ABV", 3.8], ["brewery_id", 8], ["created_at", "2018-02-16 08:13:55.458747"], ["updated_at", "2018-02-16 08:13:55.458747"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 4], ["hop_id", 30]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 4], ["hop_id", 31]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 4], ["hop_id", 39]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (0.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (30, 31)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "beers" ("name", "artwork", "ABV", "brewery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Camden Pale Ale"], ["artwork", "http://www.fillmurray.com/300/300"], ["ABV", 6.99], ["brewery_id", 9], ["created_at", "2018-02-16 08:13:55.466269"], ["updated_at", "2018-02-16 08:13:55.466269"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 5], ["hop_id", 30]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 5], ["hop_id", 31]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHop Load (0.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" WHERE "hops"."id" IN (32, 33)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "beers" ("name", "artwork", "ABV", "brewery_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Camden Hells Lager"], ["artwork", "http://www.fillmurray.com/300/300"], ["ABV", 6.99], ["brewery_id", 9], ["created_at", "2018-02-16 08:13:55.473022"], ["updated_at", "2018-02-16 08:13:55.473022"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 6], ["hop_id", 32]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "beers_hops" ("beer_id", "hop_id") VALUES ($1, $2)[0m  [["beer_id", 6], ["hop_id", 33]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/beers" for 127.0.0.1 at 2018-02-16 08:15:11 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BeersController#index as */*
+  Parameters: {"beer"=>{}}
+  [1m[36mBeer Load (0.7ms)[0m  [1m[34mSELECT "beers".* FROM "beers"[0m
+[active_model_serializers]   [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHop Load (0.6ms)[0m  [1m[34mSELECT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" WHERE "beers_hops"."beer_id" = $1[0m  [["beer_id", 1]]
+[active_model_serializers]   [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHop Load (0.5ms)[0m  [1m[34mSELECT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" WHERE "beers_hops"."beer_id" = $1[0m  [["beer_id", 2]]
+[active_model_serializers]   [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHop Load (0.4ms)[0m  [1m[34mSELECT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" WHERE "beers_hops"."beer_id" = $1[0m  [["beer_id", 3]]
+[active_model_serializers]   [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHop Load (0.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" WHERE "beers_hops"."beer_id" = $1[0m  [["beer_id", 4]]
+[active_model_serializers]   [1m[36mBrewery Load (0.4ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHop Load (0.3ms)[0m  [1m[34mSELECT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" WHERE "beers_hops"."beer_id" = $1[0m  [["beer_id", 5]]
+[active_model_serializers]   [1m[36mBrewery Load (0.2ms)[0m  [1m[34mSELECT  "breweries".* FROM "breweries" WHERE "breweries"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mHop Load (0.4ms)[0m  [1m[34mSELECT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" WHERE "beers_hops"."beer_id" = $1[0m  [["beer_id", 6]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (84.86ms)
+Completed 200 OK in 118ms (Views: 100.2ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/api/hops" for 127.0.0.1 at 2018-02-16 08:15:18 +0000
+Processing by HopsController#index as */*
+  Parameters: {"hop"=>{}}
+  [1m[36mHop Load (1.2ms)[0m  [1m[34mSELECT "hops".* FROM "hops"[0m
+[active_model_serializers]   [1m[36mBeer Load (0.6ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 27]]
+[active_model_serializers]   [1m[36mBrewery Load (2.1ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 27]]
+[active_model_serializers]   [1m[36mBeer Load (0.5ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 28]]
+[active_model_serializers]   [1m[36mBrewery Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 28]]
+[active_model_serializers]   [1m[36mBeer Load (1.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 29]]
+[active_model_serializers]   [1m[36mBrewery Load (1.7ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 29]]
+[active_model_serializers]   [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 30]]
+[active_model_serializers]   [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 30]]
+[active_model_serializers]   [1m[36mBeer Load (0.8ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 31]]
+[active_model_serializers]   [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 31]]
+[active_model_serializers]   [1m[36mBeer Load (0.5ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 32]]
+[active_model_serializers]   [1m[36mBrewery Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 32]]
+[active_model_serializers]   [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 33]]
+[active_model_serializers]   [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 33]]
+[active_model_serializers]   [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 34]]
+[active_model_serializers]   [1m[36mBrewery Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 34]]
+[active_model_serializers]   [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 35]]
+[active_model_serializers]   [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 35]]
+[active_model_serializers]   [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 36]]
+[active_model_serializers]   [1m[36mBrewery Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 36]]
+[active_model_serializers]   [1m[36mBeer Load (0.2ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 37]]
+[active_model_serializers]   [1m[36mBrewery Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 37]]
+[active_model_serializers]   [1m[36mBeer Load (0.4ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 38]]
+[active_model_serializers]   [1m[36mBrewery Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 38]]
+[active_model_serializers]   [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 39]]
+[active_model_serializers]   [1m[36mBrewery Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "breweries".* FROM "breweries" INNER JOIN "beers" ON "breweries"."id" = "beers"."brewery_id" INNER JOIN "beers_hops" ON "beers"."id" = "beers_hops"."beer_id" WHERE "beers_hops"."hop_id" = $1[0m  [["hop_id", 39]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (114.76ms)
+Completed 200 OK in 131ms (Views: 100.3ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/api/breweries" for 127.0.0.1 at 2018-02-16 08:15:29 +0000
+Processing by BreweriesController#index as */*
+  Parameters: {"brewery"=>{}}
+  [1m[36mBrewery Load (0.3ms)[0m  [1m[34mSELECT "breweries".* FROM "breweries"[0m
+[active_model_serializers]   [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = $1[0m  [["brewery_id", 7]]
+[active_model_serializers]   [1m[36mHop Load (1.4ms)[0m  [1m[34mSELECT DISTINCT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" INNER JOIN "beers" ON "beers_hops"."beer_id" = "beers"."id" WHERE "beers"."brewery_id" = $1[0m  [["brewery_id", 7]]
+[active_model_serializers]   [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = $1[0m  [["brewery_id", 8]]
+[active_model_serializers]   [1m[36mHop Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" INNER JOIN "beers" ON "beers_hops"."beer_id" = "beers"."id" WHERE "beers"."brewery_id" = $1[0m  [["brewery_id", 8]]
+[active_model_serializers]   [1m[36mBeer Load (0.3ms)[0m  [1m[34mSELECT "beers".* FROM "beers" WHERE "beers"."brewery_id" = $1[0m  [["brewery_id", 9]]
+[active_model_serializers]   [1m[36mHop Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "hops".* FROM "hops" INNER JOIN "beers_hops" ON "hops"."id" = "beers_hops"."hop_id" INNER JOIN "beers" ON "beers_hops"."beer_id" = "beers"."id" WHERE "beers"."brewery_id" = $1[0m  [["brewery_id", 9]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.54ms)
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 4.1ms)
+
+
